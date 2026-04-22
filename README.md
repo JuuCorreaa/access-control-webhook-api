@@ -29,7 +29,7 @@ Allow physical events (people entering/leaving) to be captured and processed in 
 2. API receives the webhook  
 3. Payload is validated  
 4. Event is processed  
-5. Data is stored  
+4. Data is stored  
 6. System updates presence/access  
 
 ---
@@ -62,6 +62,7 @@ Payload is validated
 Event is processed
 Data is stored
 System updates user access/presence
+🧩 Advanced Architecture Diagram
 ⚡ Real-world scenario
 
 This API simulates real-world integration between physical access control hardware and digital systems, commonly used in:
