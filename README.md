@@ -1,110 +1,89 @@
 # 🚪 Access Control Integration API (Webhook)
 
-API backend desenvolvida para integrar dispositivos de controle de acesso (catracas, biometria, etc) com sistemas web, recebendo eventos em tempo real via webhook.
+Production-ready API for real-time access control integration via webhook.
 
-> Exemplo de integração com dispositivos de mercado como Intelbras.
-
----
-
-## 🚀 Objetivo
-
-Permitir que eventos físicos (entrada/saída de pessoas) sejam capturados e processados em tempo real dentro de uma aplicação.
+> Example integration with access control devices (e.g. Intelbras).
 
 ---
 
-## ⚙️ Tecnologias utilizadas
+## 🚀 Objective
+
+Allow physical events (people entering/leaving) to be captured and processed in real time within a system.
+
+---
+
+## ⚙️ Technologies
 
 - Node.js
 - Express
 - PostgreSQL
 - Docker
-- Webhooks
 - REST API
+- Webhooks
 
 ---
 
-## 🔄 Como funciona
+## 🔄 How it works
 
-1. O dispositivo de controle de acesso envia um evento via webhook
-2. A API recebe esse evento
-3. Os dados são processados
-4. O sistema registra presença/acesso
-5. Logs são armazenados para auditoria
+1. Access control device sends an event  
+2. API receives the webhook  
+3. Payload is validated  
+4. Event is processed  
+5. Data is stored  
+6. System updates presence/access  
 
 ---
 
-## 📡 Exemplo de evento recebido
+## 📡 Example payload
 
 ```json
 {
-  "device_id": "catraca_01",
+  "device_id": "turnstile_01",
   "user_id": "123",
   "event": "access_granted",
   "timestamp": "2026-04-22T10:00:00Z"
 }
-```
+📌 Main route
+POST /webhook/access
 
----
+Receives access control events.
 
-## 📌 Rotas principais
+🔐 Security
+Token-based authentication
+Payload validation
+Protection against invalid requests
+🔄 Event Flow
 
-### POST /webhook/access
+Device → Webhook → API → Processing → Database → Application
 
-Recebe eventos de dispositivos de controle de acesso.
+Device sends access event
+API receives webhook
+Payload is validated
+Event is processed
+Data is stored
+System updates user access/presence
+⚡ Real-world scenario
 
----
+This API simulates real-world integration between physical access control hardware and digital systems, commonly used in:
 
-## 🔐 Segurança
-
-- Autenticação via token
-- Validação de payload
-- Proteção contra requisições inválidas
-
----
-
-## 🧠 Destaques técnicos
-
-- Processamento de eventos em tempo real
-- Arquitetura preparada para alta escala
-- Separação de camadas (controller, service, repository)
-- Estrutura pronta para integração com múltiplos dispositivos
-
----
-
-## 🛠️ Como rodar o projeto
-
-```bash
-# Clonar repositório
+Schools
+Companies
+Events
+Smart buildings
+🧠 Technical highlights
+Real-time event processing
+Scalable architecture
+Clean code structure (controller, service, repository)
+Ready for integration with multiple devices
+🛠️ Run locally
 git clone https://github.com/seu-usuario/access-control-webhook-api.git
-
-# Instalar dependências
+cd access-control-webhook-api
 npm install
-
-# Rodar servidor
 npm run dev
-```
-
----
-
-## 📁 Estrutura do projeto
-
-```
+📁 Project structure
 src/
   controllers/
   services/
   routes/
   database/
   middlewares/
-```
-
----
-
-## 📄 Observações
-
-Este projeto é uma versão demonstrativa para fins de portfólio, com dados simulados e sem conexão com ambientes produtivos.
-
----
-
-## 👨‍💻 Autor
-
-Desenvolvido como projeto de integração entre hardware e software para sistemas de gestão.
