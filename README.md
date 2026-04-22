@@ -1,4 +1,4 @@
-# 🚪 Access Control Integration API (Webhook)
+# Access Control Integration API (Webhook)
 
 Production-ready API for real-time access control integration via webhook.
 
@@ -6,13 +6,13 @@ Production-ready API for real-time access control integration via webhook.
 
 ---
 
-## 🚀 Objective
+##  Objective
 
 Allow physical events (people entering/leaving) to be captured and processed in real time within a system.
 
 ---
 
-## ⚙️ Technologies
+##  Technologies
 
 - Node.js
 - Express
@@ -23,7 +23,7 @@ Allow physical events (people entering/leaving) to be captured and processed in 
 
 ---
 
-## 🔄 How it works
+##  How it works
 
 1. Access control device sends an event  
 2. API receives the webhook  
@@ -34,7 +34,7 @@ Allow physical events (people entering/leaving) to be captured and processed in 
 
 ---
 
-## 📡 Example payload
+##  Example payload
 
 ```json
 {
@@ -43,16 +43,16 @@ Allow physical events (people entering/leaving) to be captured and processed in 
   "event": "access_granted",
   "timestamp": "2026-04-22T10:00:00Z"
 }
-📌 Main route
+ Main route
 POST /webhook/access
 
 Receives access control events.
 
-🔐 Security
+ Security
 Token-based authentication
 Payload validation
 Protection against invalid requests
-🔄 Event Flow
+ Event Flow
 
 Device → Webhook → API → Processing → Database → Application
 
@@ -62,8 +62,8 @@ Payload is validated
 Event is processed
 Data is stored
 System updates user access/presence
-🧩 Advanced Architecture Diagram
-⚡ Real-world scenario
+ Advanced Architecture Diagram
+ Real-world scenario
 
 This API simulates real-world integration between physical access control hardware and digital systems, commonly used in:
 
@@ -71,17 +71,17 @@ Schools
 Companies
 Events
 Smart buildings
-🧠 Technical highlights
+ Technical highlights
 Real-time event processing
 Scalable architecture
 Clean code structure (controller, service, repository)
 Ready for integration with multiple devices
-🛠️ Run locally
-git clone https://github.com/seu-usuario/access-control-webhook-api.git
+ Run locally
+git clone https://github.com/JuuCorreaa/access-control-webhook-api.git
 cd access-control-webhook-api
 npm install
 npm run dev
-📁 Project structure
+ Project structure
 src/
   controllers/
   services/
